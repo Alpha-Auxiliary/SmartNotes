@@ -1,0 +1,50 @@
+smartnotes/
+├─ docs/ # 设计文档、API、ERD
+├─ deploy/
+│ ├─ docker-compose.yml
+│ └─ nginx.conf # 预留（本地可不启）
+├─ backend/
+│ ├─ package.json
+│ ├─ tsconfig.json
+│ ├─ src/
+│ │ ├─ main.ts
+│ │ ├─ app.module.ts
+│ │ ├─ common/
+│ │ │ ├─ guards/jwt-auth.guard.ts
+│ │ │ └─ decorators/user.decorator.ts
+│ │ ├─ auth/
+│ │ │ ├─ auth.module.ts
+│ │ │ ├─ auth.controller.ts
+│ │ │ ├─ auth.service.ts
+│ │ │ └─ strategies/
+│ │ │ └─ jwt.strategy.ts
+│ │ ├─ users/
+│ │ │ ├─ users.module.ts
+│ │ │ ├─ users.service.ts
+│ │ ├─ notes/
+│ │ │ ├─ notes.module.ts
+│ │ │ ├─ notes.controller.ts
+│ │ │ └─ notes.service.ts
+│ │ └─ tags/
+│ │ ├─ tags.module.ts
+│ │ ├─ tags.controller.ts
+│ │ └─ tags.service.ts
+│ ├─ prisma/
+│ │ ├─ schema.prisma
+│ │ └─ seed.ts (可选)
+│ └─ .env.example
+└─ frontend/
+    ├─ package.json
+    ├─ index.html
+    └─ src/
+        ├─ main.ts
+        ├─ App.vue
+        ├─ router.ts
+        ├─ stores/auth.ts
+        ├─ api/http.ts
+        ├─ pages/
+        │ ├─ Login.vue
+        │ ├─ Notes.vue
+        │ └─ NoteEditor.vue
+        └─ components/
+        └─ NoteCard.vue
